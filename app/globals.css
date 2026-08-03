@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #F6F7F9;
+  color: #0D1117;
+}
+
+::selection {
+  background-color: #2454FF;
+  color: #FFFFFF;
+}
+
+/* Visible keyboard focus, always */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #2454FF;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* --- Signature element: annotation corner-brackets ---
+   Echoes the bounding-box overlays from object-detection
+   tooling (YOLO / SAM annotation UIs). Corners only, never
+   a full box, so it reads as instrumentation rather than
+   decoration. --- */
+.bracket-frame {
+  position: relative;
+}
+.bracket-frame::before,
+.bracket-frame::after,
+.bracket-frame > .bracket-tr,
+.bracket-frame > .bracket-br {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: #2454FF;
+  opacity: 0;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+.bracket-frame::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+.bracket-frame::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+.bracket-frame > .bracket-tr {
+  top: -1px;
+  right: -1px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+}
+.bracket-frame > .bracket-br {
+  bottom: -1px;
+  left: -1px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+}
+.bracket-frame:hover::before,
+.bracket-frame:hover::after,
+.bracket-frame:hover > .bracket-tr,
+.bracket-frame:hover > .bracket-br,
+.bracket-frame:focus-within::before,
+.bracket-frame:focus-within::after,
+.bracket-frame:focus-within > .bracket-tr,
+.bracket-frame:focus-within > .bracket-br {
+  opacity: 1;
+}
+
+.eyebrow {
+  font-family: var(--font-jbmono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5B6472;
+}
+
+.stat-value {
+  font-family: var(--font-jbmono);
+  font-variant-numeric: tabular-nums;
+}
+
+.hairline {
+  border-color: #DCE0E6;
+}
