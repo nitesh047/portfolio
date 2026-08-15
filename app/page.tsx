@@ -17,14 +17,14 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="max-w-content mx-auto px-6 md:px-10 pt-14 pb-16">
+      <section className="max-w-content mx-auto px-6 md:px-10 pt-10 sm:pt-14 pb-16">
         <div className="max-w-[980px]">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-[-0.02em] leading-[1.1] max-w-3xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-[-0.02em] leading-[1.15] sm:leading-[1.1] max-w-3xl">
             I build AI systems for computer vision, geospatial intelligence,
             and data infrastructure.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-graphite text-lg leading-relaxed">
+          <p className="mt-5 sm:mt-6 max-w-2xl text-graphite text-base sm:text-lg leading-relaxed">
             IIT Delhi &rsquo;23. Technology &amp; AI Lead at Bharti Institute of Public Policy,
             ISB Hyderabad. I build end-to-end pipelines that collect,
             structure, and analyze data from the physical world — turning
@@ -32,23 +32,23 @@ export default function HomePage() {
             inference across cloud and on-prem infrastructure.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-3 sm:gap-4">
             <Link
               href="/work"
-              className="inline-flex items-center gap-2 bg-ink text-bg px-[22px] py-3 rounded-lg text-[15px] font-semibold hover:bg-signal transition-colors"
+              className="inline-flex items-center gap-2 bg-ink text-bg px-5 sm:px-[22px] py-2.5 sm:py-3 rounded-lg text-sm sm:text-[15px] font-semibold hover:bg-signal transition-colors"
             >
               View work
               <span className="text-[13px]">→</span>
             </Link>
             <Link
               href="/resume"
-              className="inline-flex items-center gap-2 border hairline px-[22px] py-3 rounded-lg text-[15px] font-semibold text-ink hover:border-signal hover:text-signal transition-colors"
+              className="inline-flex items-center gap-2 border hairline px-5 sm:px-[22px] py-2.5 sm:py-3 rounded-lg text-sm sm:text-[15px] font-semibold text-ink hover:border-signal hover:text-signal transition-colors"
             >
               Resume
             </Link>
           </div>
 
-          <div className="mt-14 flex flex-wrap gap-12 pt-8 border-t hairline">
+          <div className="mt-10 sm:mt-14 flex flex-wrap gap-x-8 gap-y-6 sm:gap-12 pt-6 sm:pt-8 border-t hairline">
             {[
               { value: "Technology & AI Lead", label: "BIPP, ISB", accent: true },
               { value: "nCount", label: "AI + Geospatial Systems" },
@@ -57,13 +57,13 @@ export default function HomePage() {
             ].map((stat) => (
               <div key={stat.label}>
                 <div
-                  className={`text-lg font-extrabold tracking-[-0.02em] ${
+                  className={`text-base sm:text-lg font-extrabold tracking-[-0.02em] ${
                     stat.accent ? "text-signal" : "text-ink"
                   }`}
                 >
                   {stat.value}
                 </div>
-                <div className="text-[13px] text-graphite mt-1">
+                <div className="text-xs sm:text-[13px] text-graphite mt-1">
                   {stat.label}
                 </div>
               </div>
