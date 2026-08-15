@@ -18,6 +18,9 @@ export function generateMetadata({
   return {
     title: project.name,
     description: project.oneLiner,
+    alternates: {
+      canonical: `/work/${project.slug}`,
+    },
     openGraph: {
       title: `${project.name} — Nitesh Saini`,
       description: project.oneLiner,

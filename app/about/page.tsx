@@ -3,7 +3,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Nitesh Saini — AI/ML engineer, IIT Delhi 2023, Lead of Technology & AI at the Bharti Institute of Public Policy, ISB.",
+    "Nitesh Saini — AI/ML engineer, IIT Delhi 2023, Lead of Technology & AI at the Bharti Institute of Public Policy (BIPP), ISB.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {
@@ -22,9 +25,9 @@ export default function AboutPage() {
         </p>
         <p>
           I graduated from IIT Delhi in 2023 and currently lead Technology
-          &amp; AI at the Bharti Institute of Public Policy, Indian School
-          of Business, where I design and ship the ML systems behind the
-          institute&apos;s research infrastructure.
+          &amp; AI at the Bharti Institute of Public Policy (BIPP), Indian
+          School of Business, where I design and ship the ML systems behind
+          the institute&apos;s research infrastructure.
         </p>
         <p>
           One of my datasets — 156,001 images built for bark and

@@ -1,3 +1,17 @@
+export const person = {
+  name: "Nitesh Saini",
+  jobTitle: "AI/ML Engineer",
+  email: "niteshsaini5112001@gmail.com",
+  url: "https://niteshsaini.com",
+  github: "https://github.com/nitesh047",
+  linkedin: "https://linkedin.com/in/nitesh-saini-80893b1a0",
+  alumniOf: "Indian Institute of Technology Delhi",
+  worksFor: {
+    name: "Bharti Institute of Public Policy (BIPP), Indian School of Business",
+    shortName: "BIPP",
+  },
+};
+
 export type Project = {
   slug: string;
   name: string;

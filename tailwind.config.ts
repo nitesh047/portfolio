@@ -9,17 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#F6F7F9",
-        surface: "#FFFFFF",
-        ink: "#0D1117",
-        graphite: "#5B6472",
-        line: "#DCE0E6",
-        signal: "#2454FF",
-        signalDim: "#E8EDFF",
-        signalDeep: "#0E2E9E",
+        bg: "oklch(0.985 0.003 90)",
+        surface: "oklch(1 0 0)",
+        ink: "oklch(0.18 0.005 90)",
+        graphite: "oklch(0.4 0.005 90)",
+        line: "oklch(0.9 0.005 90)",
+        signal: "oklch(0.55 0.14 290)",
+        signalDim: "oklch(0.94 0.03 290)",
+        signalDeep: "oklch(0.45 0.16 290)",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        sans: ["var(--font-public-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-jbmono)", "ui-monospace", "monospace"],
       },
       maxWidth: {

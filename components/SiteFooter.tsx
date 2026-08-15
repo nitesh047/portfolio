@@ -1,3 +1,5 @@
+import { person } from "@/content/data";
+
 export default function SiteFooter() {
   return (
     <footer className="border-t hairline mt-24">
@@ -7,20 +9,24 @@ export default function SiteFooter() {
         </p>
         <div className="flex items-center gap-5">
           <a
-            href="mailto:hello@niteshsaini.com"
-            className="eyebrow hover:text-signal transition-colors"
+            href={`mailto:${person.email}`}
+            className="font-mono text-[0.72rem] tracking-[0.14em] uppercase text-signal hover:text-signalDeep transition-colors"
           >
             email
           </a>
           <a
-            href="https://github.com"
-            className="eyebrow hover:text-signal transition-colors"
+            href={person.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[0.72rem] tracking-[0.14em] uppercase text-signal hover:text-signalDeep transition-colors"
           >
             github
           </a>
           <a
-            href="https://linkedin.com"
-            className="eyebrow hover:text-signal transition-colors"
+            href={person.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[0.72rem] tracking-[0.14em] uppercase text-signal hover:text-signalDeep transition-colors"
           >
             linkedin
           </a>

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Work",
   description:
     "Computer-vision and ML systems built by Nitesh Saini — detection, segmentation, and retrieval pipelines shipped to production.",
+  alternates: {
+    canonical: "/work",
+  },
 };
 
 export default function WorkPage() {

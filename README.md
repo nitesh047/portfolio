@@ -5,14 +5,17 @@ generation, deploy target: Vercel.
 
 ## Design concept
 
-- **Palette**: cool off-white background, near-black ink text, graphite
-  secondary, and a single precision-blue signal color (`#2454FF`) — read as
-  an annotation-tool overlay color, not a generic accent.
+- **Palette**: warm off-white background, near-black ink text, graphite
+  secondary, and a violet signal color (`oklch(0.55 0.14 290)`) for links,
+  hover states, and highlighted metrics. A separate green success color
+  marks the "open to roles" status badge. All theme colors are defined in
+  OKLCH in `tailwind.config.ts`.
 - **Signature element**: corner-bracket frames on cards and stat chips,
   echoing bounding-box annotation UIs (YOLO / SAM). Appears on hover/focus
   only, so it reads as instrumentation rather than decoration.
-- **Type**: Inter for headings/body, JetBrains Mono for nav labels, eyebrows,
-  metrics, and tags — signals "this person handles precision data."
+- **Type**: Public Sans for headings/body, JetBrains Mono for nav labels,
+  eyebrows, metrics, and tags — signals "this person handles precision
+  data."
 
 ## Local setup
 

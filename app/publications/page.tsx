@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Publications",
   description:
     "Peer-reviewed datasets and papers by Nitesh Saini, including Nature Scientific Data and NeurIPS.",
+  alternates: {
+    canonical: "/publications",
+  },
 };
 
 const statusLabel: Record<string, string> = {

@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { projects, publications } from "@/content/data";
-import StatChip from "@/components/StatChip";
 import ProjectCard from "@/components/ProjectCard";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function HomePage() {
   const featured = projects.filter(
@@ -10,44 +16,59 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero — framed as a system status readout */}
-      <section className="max-w-content mx-auto px-6 md:px-10 pt-20 pb-16">
-        <div className="flex items-center gap-2 mb-8">
-          <span className="w-1.5 h-1.5 rounded-full bg-signal" />
-          <span className="eyebrow text-signal">open to senior ai/ml roles</span>
-        </div>
+      {/* Hero */}
+      <section className="max-w-content mx-auto px-6 md:px-10 pt-14 pb-16">
+        <div className="max-w-[980px]">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-[-0.02em] leading-[1.1] max-w-3xl">
+            I build AI systems for computer vision, geospatial intelligence,
+            and data infrastructure.
+          </h1>
 
-        <h1 className="text-4xl md:text-6xl font-semibold tracking-tightest2 leading-[1.05] max-w-3xl">
-          I ship computer-vision and RAG systems that hold up in production.
-        </h1>
+          <p className="mt-6 max-w-2xl text-graphite text-lg leading-relaxed">
+            IIT Delhi &rsquo;23. Technology &amp; AI Lead at Bharti Institute of Public Policy,
+            ISB Hyderabad. I build end-to-end pipelines that collect,
+            structure, and analyze data from the physical world — turning
+            raw sensor and image data into production-grade AI systems and
+            inference across cloud and on-prem infrastructure.
+          </p>
 
-        <p className="mt-6 max-w-2xl text-graphite text-lg leading-relaxed">
-          Lead of Technology &amp; AI at the Bharti Institute of Public Policy,
-          ISB. IIT Delhi, 2023. I design detection, segmentation, and
-          retrieval pipelines end-to-end — from data collection to
-          production inference on AWS.
-        </p>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <Link
+              href="/work"
+              className="inline-flex items-center gap-2 bg-ink text-bg px-[22px] py-3 rounded-lg text-[15px] font-semibold hover:bg-signal transition-colors"
+            >
+              View work
+              <span className="text-[13px]">→</span>
+            </Link>
+            <Link
+              href="/resume"
+              className="inline-flex items-center gap-2 border hairline px-[22px] py-3 rounded-lg text-[15px] font-semibold text-ink hover:border-signal hover:text-signal transition-colors"
+            >
+              Resume
+            </Link>
+          </div>
 
-        <div className="mt-10 flex flex-wrap items-center gap-3">
-          <Link
-            href="/work"
-            className="inline-flex items-center gap-2 bg-ink text-bg px-5 py-3 rounded-sm text-sm font-medium hover:bg-signal transition-colors"
-          >
-            View work
-          </Link>
-          <Link
-            href="/resume"
-            className="inline-flex items-center gap-2 border hairline px-5 py-3 rounded-sm text-sm font-medium text-ink hover:border-signal hover:text-signal transition-colors"
-          >
-            Resume
-          </Link>
-        </div>
-
-        <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl">
-          <StatChip label="mask mAP50" value="0.953" />
-          <StatChip label="dataset images" value="156,001" />
-          <StatChip label="publication" value="Nature Sci. Data" />
-          <StatChip label="grad year" value="IIT Delhi '23" />
+          <div className="mt-14 flex flex-wrap gap-12 pt-8 border-t hairline">
+            {[
+              { value: "Technology & AI Lead", label: "BIPP, ISB", accent: true },
+              { value: "nCount", label: "AI + Geospatial Systems" },
+              { value: "Nature Scientific Data", label: "Research Publication" },
+              { value: "IIT Delhi '23", label: "B.Tech. · Engineering" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <div
+                  className={`text-lg font-extrabold tracking-[-0.02em] ${
+                    stat.accent ? "text-signal" : "text-ink"
+                  }`}
+                >
+                  {stat.value}
+                </div>
+                <div className="text-[13px] text-graphite mt-1">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
