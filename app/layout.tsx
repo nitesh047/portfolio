@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s · Nitesh Saini",
   },
   description:
-    "Nitesh Saini — AI/ML engineer building production computer-vision and RAG systems. IIT Delhi '23. Lead of Technology & AI at Bharti Institute of Public Policy (BIPP), ISB. Published in Nature Scientific Data.",
+    "Nitesh Saini — Technology & AI Lead at ISB's Bharti Institute. I build end-to-end pipelines that collect, structure, and analyze data from the physical world, turning raw sensor and image data into production-grade AI systems across computer vision, geospatial intelligence, and data infrastructure. IIT Delhi '23. Published in Nature Scientific Data.",
   keywords: [
     "Nitesh Saini",
     "Nitesh Saini IIT Delhi",
@@ -36,8 +36,10 @@ export const metadata: Metadata = {
     "Nitesh Saini BIPP",
     "BIPP team",
     "Bharti Institute of Public Policy",
-    "AI engineer",
-    "ML engineer",
+    "computer vision engineer",
+    "geospatial intelligence",
+    "data infrastructure engineer",
+    "AI systems engineer",
     "IIT Delhi",
   ],
   authors: [{ name: "Nitesh Saini", url: siteUrl }],
@@ -50,14 +52,14 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: "Nitesh Saini | Technology & AI Lead, IIT Delhi '23",
     description:
-      "AI/ML engineer building production computer-vision and RAG systems. IIT Delhi '23. Published in Nature Scientific Data.",
+      "I build AI systems for computer vision, geospatial intelligence, and data infrastructure. IIT Delhi '23. Published in Nature Scientific Data.",
     siteName: "Nitesh Saini",
   },
   twitter: {
     card: "summary_large_image",
     title: "Nitesh Saini | Technology & AI Lead, IIT Delhi '23",
     description:
-      "AI/ML engineer building production computer-vision and RAG systems.",
+      "I build AI systems for computer vision, geospatial intelligence, and data infrastructure.",
   },
   robots: {
     index: true,
