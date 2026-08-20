@@ -24,7 +24,7 @@ const siteUrl = "https://niteshsaini.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Nitesh Saini — AI/ML Engineer",
+    default: "Nitesh Saini | Technology & AI Lead, IIT Delhi '23",
     template: "%s · Nitesh Saini",
   },
   description:
@@ -48,14 +48,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Nitesh Saini — AI/ML Engineer",
+    title: "Nitesh Saini | Technology & AI Lead, IIT Delhi '23",
     description:
       "AI/ML engineer building production computer-vision and RAG systems. IIT Delhi '23. Published in Nature Scientific Data.",
     siteName: "Nitesh Saini",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nitesh Saini — AI/ML Engineer",
+    title: "Nitesh Saini | Technology & AI Lead, IIT Delhi '23",
     description:
       "AI/ML engineer building production computer-vision and RAG systems.",
   },
